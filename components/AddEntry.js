@@ -8,7 +8,7 @@ import DateHeader from "./DateHeader";
 export default class AddEntry extends Component {
     state = {
         run: 0,
-        bike: -10,
+        bike: 0,
         swim: 0,
         sleep: 0,
         eat: 0,
@@ -67,7 +67,6 @@ debugger;
         return (
              <View>
                  <DateHeader date={(new Date()).toLocaleDateString()}/>
-                 <Text>{JSON.stringify(this.state)}</Text>
                 {Object.keys(metaInfo).map((key) => {
                     const { getIcon, type, ...rest } = metaInfo[key];
                     const value = this.state[key];
