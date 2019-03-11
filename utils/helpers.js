@@ -60,13 +60,13 @@ export function getMetricMetaInfo(metric) {
             type: 'steppers',
             getIcon(){
                 return (
-                    <view>
+                    <View>
                         <MaterialIcons
                             name='directions-run'
                             color={'black'}
                             size={35}
                         />
-                    </view>
+                    </View>
                 )
             }
         },
@@ -78,13 +78,13 @@ export function getMetricMetaInfo(metric) {
             type: 'steppers',
             getIcon(){
                 return (
-                    <view>
+                    <View>
                         <MaterialCommunityIcons
                             name='bike'
                             color={'black'}
                             size={35}
                         />
-                    </view>
+                    </View>
                 )
             }
         },
@@ -96,13 +96,13 @@ export function getMetricMetaInfo(metric) {
             type: 'steppers',
             getIcon(){
                 return (
-                    <view>
+                    <View>
                         <MaterialCommunityIcons
                             name='swim'
                             color={'black'}
                             size={35}
                         />
-                    </view>
+                    </View>
                 )
             }
         },
@@ -114,13 +114,13 @@ export function getMetricMetaInfo(metric) {
             type: 'slider',
             getIcon(){
                 return (
-                    <view>
+                    <View>
                         <FontAwesome
                             name='bed'
                             color={'black'}
                             size={35}
                         />
-                    </view>
+                    </View>
                 )
             }
         },
@@ -132,20 +132,21 @@ export function getMetricMetaInfo(metric) {
             type: 'slider',
             getIcon(){
                 return (
-                    <view>
+                    <View>
                         <MaterialCommunityIcons
                             name='food'
                             color={'black'}
                             size={35}
                         />
-                    </view>
+                    </View>
                 )
             }
         }
     };
-debugger;
-    return  typeof metric === 'undefine'
+
+    const response =  typeof metric === 'undefined'
         ? info
-        : info[metric]
+        : info[metric];
+    return response;
 
 }
